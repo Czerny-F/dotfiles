@@ -83,6 +83,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 " 行末の半角スペースを可視化
 NeoBundle 'bronson/vim-trailing-whitespace'
 
+" Scala 用syntax highlight
+NeoBundle 'derekwyatt/vim-scala'
+
 call neobundle#end()
 
 " Required:
