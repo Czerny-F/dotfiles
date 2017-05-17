@@ -86,6 +86,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 " Scala 用syntax highlight
 NeoBundle 'derekwyatt/vim-scala'
 
+" Flake8-vim
+NeoBundle 'andviro/flake8-vim'
+
 call neobundle#end()
 
 " Required:
@@ -98,5 +101,10 @@ NeoBundleCheck
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 0
+
+" for Python
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 filetype on
