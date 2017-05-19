@@ -26,8 +26,8 @@ set showmatch
 set expandtab
 set tabstop=2
 set shiftwidth=2
-"set autoindent
-"set smartindent
+set autoindent
+set smartindent
 set smarttab
 
 syntax on
@@ -88,6 +88,9 @@ NeoBundle 'derekwyatt/vim-scala'
 
 " Flake8-vim
 NeoBundle 'andviro/flake8-vim'
+
+" HTML/CSS入力補助
+NeoBundle 'mattn/emmet-vim'
 
 call neobundle#end()
 
