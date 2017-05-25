@@ -92,6 +92,13 @@ NeoBundle 'andviro/flake8-vim'
 " HTML/CSS入力補助
 NeoBundle 'mattn/emmet-vim'
 
+" TypeScript
+" Syntax
+NeoBundle 'leafgarland/typescript-vim'
+" like IDE
+" NeoBundle 'Shougo/vimproc'
+" NeoBundle 'Quramy/tsuquyomi'
+
 call neobundle#end()
 
 " Required:
