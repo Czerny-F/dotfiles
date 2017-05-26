@@ -101,7 +101,8 @@ NeoBundle 'leafgarland/typescript-vim'
 
 " CSS3 / HTML5
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
 
 call neobundle#end()
 
