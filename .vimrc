@@ -99,6 +99,10 @@ NeoBundle 'leafgarland/typescript-vim'
 " NeoBundle 'Shougo/vimproc'
 " NeoBundle 'Quramy/tsuquyomi'
 
+" CSS3 / HTML5
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+
 call neobundle#end()
 
 " Required:
