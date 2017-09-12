@@ -74,6 +74,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
+" ファイルオープンを便利に
+NeoBundle 'Shougo/unite.vim'
+
 " コメントON/OFFを手軽に実行
 NeoBundle 'tomtom/tcomment_vim'
 " シングルクオートとダブルクオートの入れ替え等
