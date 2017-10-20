@@ -89,8 +89,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 " Scala 用syntax highlight
 NeoBundle 'derekwyatt/vim-scala'
 
-" Flake8-vim
-NeoBundle 'andviro/flake8-vim'
+" Python
+NeoBundle 'Vimjas/vim-python-pep8-indent'
+NeoBundle 'nvie/vim-flake8'
 
 " HTML/CSS入力補助
 NeoBundle 'mattn/emmet-vim'
@@ -124,5 +125,17 @@ let g:indent_guides_enable_on_vim_startup = 0
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+" vim-flake8
+autocmd BufWritePost *.py call Flake8()
+let g:flake8_show_in_gutter=1
+" let g:flake8_show_in_file=1
+let g:flake8_error_marker='EE'
+let g:flake8_warning_marker='WW'
+
+" https://github.com/nvie/vim-flake8#max-line-lengths
+" $ vim ~/.config/flake8
+" [flake8]
+" max-line-length = 120
 
 filetype on
