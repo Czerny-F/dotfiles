@@ -138,4 +138,31 @@ let g:flake8_warning_marker='WW'
 " [flake8]
 " max-line-length = 120
 
+" Jinja2
+" http://www.vim.org/scripts/script.php?script_id=1856
+" copy jinja.vim, htmljinja.vim into ~/.vim/syntax
+
+" and ftdetect from
+" https://github.com/Glench/Vim-Jinja2-Syntax/blob/master/ftdetect/jinja.vim
+" and modified
+" Figure out which type of hilighting to use for html.
+fun! s:SelectHTML()
+  let n = 1
+  while n < 50 && n <= line("$")
+    " check for jinja
+    if getline(n) =~ '{{.*}}\|{%-\?\s*\(end.*\|extends\|block\|macro\|set\|if\|for\|include\|trans\)\>'
+      " if expand("%:p") =~ 'jinja'
+        set ft=htmljinja
+        return
+      " endif
+      " set ft=htmldjango
+      " return
+    endif
+    let n = n + 1
+  endwhile
+endfun
+autocmd BufNewFile,BufRead *.html,*.htm,*.nunjucks,*.nunjs  call s:SelectHTML()
+autocmd BufNewFile,BufRead *.jinja2,*.j2,*.jinja set ft=jinja
+
+
 filetype on
