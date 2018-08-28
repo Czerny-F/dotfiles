@@ -108,6 +108,17 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 
+" Vue.js
+NeoBundle 'posva/vim-vue'
+
+" NERDTree
+NeoBundle 'scrooloose/nerdtree'
+
+" Indent
+" NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
+
 call neobundle#end()
 
 " Required:
@@ -163,6 +174,18 @@ fun! s:SelectHTML()
 endfun
 autocmd BufNewFile,BufRead *.html,*.htm,*.nunjucks,*.nunjs  call s:SelectHTML()
 autocmd BufNewFile,BufRead *.jinja2,*.j2,*.jinja set ft=jinja
+
+" posva/vim-vue
+autocmd FileType vue syntax sync fromstart
+
+" NERDTree shortcut
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven guibg=green ctermbg=4
 
 
 filetype on
