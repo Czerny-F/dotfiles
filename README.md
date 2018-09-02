@@ -1,10 +1,17 @@
 # dotfiles
 
 ```bash
-$ cd ~
-$ ln -s /path/to/repo/.vimrc
-$ ln -s /path/to/repo/.bashrc
-$ ln -s /path/to/repo/.gitignore
-$ cd .config
-$ ln -s /path/to/repo/flake8
+mkdir .config
+mkdir -p .vim/syntax
+
+cd ~
+ln -s ~/dotfiles/vimrc .vimrc
+ln -s ~/dotfiles/gitignore .gitignore
+
+cd ~/.config
+ln -s ~/dotfiles/flake8
+
+cd ~/.vim/syntax
+ln -s ~/dotfiles/htmljinja.vim
+ln -s ~/dotfiles/jinja.vim
 ```
