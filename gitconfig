@@ -1,0 +1,17 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim -c \"set fenc=utf-8\"
+	precomposeunicode = true
+[user]
+	email = dummy00.cz@gmail.com
+	name = Czerny-F
+[push]
+	default = matching
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	tree = log --graph --oneline --decorate --branches --remotes --tags
+[http]
+	sslVerify = false

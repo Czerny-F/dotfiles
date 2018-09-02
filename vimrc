@@ -46,11 +46,6 @@ if has('syntax')
   call ZenkakuSpace()
 endif
 
-" 自動括弧閉じ
-"imap { {}<LEFT>
-"imap [ []<LEFT>
-"imap ( ()<LEFT>
-
 
 " NeoBundle
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -81,8 +76,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tomtom/tcomment_vim'
 " シングルクオートとダブルクオートの入れ替え等
 NeoBundle 'tpope/vim-surround'
-" インデントに色を付けて見やすくする
-NeoBundle 'nathanaelkane/vim-indent-guides'
 " 行末の半角スペースを可視化
 NeoBundle 'bronson/vim-trailing-whitespace'
 
@@ -96,27 +89,13 @@ NeoBundle 'nvie/vim-flake8'
 " HTML/CSS入力補助
 NeoBundle 'mattn/emmet-vim'
 
-" TypeScript
-" Syntax
-NeoBundle 'leafgarland/typescript-vim'
-" like IDE
-" NeoBundle 'Shougo/vimproc'
-" NeoBundle 'Quramy/tsuquyomi'
-
 " CSS3 / HTML5
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 
-" Vue.js
-NeoBundle 'posva/vim-vue'
-
 " NERDTree
 NeoBundle 'scrooloose/nerdtree'
-
-" Indent
-" NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 
 
 call neobundle#end()
@@ -175,17 +154,8 @@ endfun
 autocmd BufNewFile,BufRead *.html,*.htm,*.nunjucks,*.nunjs  call s:SelectHTML()
 autocmd BufNewFile,BufRead *.jinja2,*.j2,*.jinja set ft=jinja
 
-" posva/vim-vue
-autocmd FileType vue syntax sync fromstart
-
 " NERDTree shortcut
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven guibg=green ctermbg=4
 
 
 filetype on
