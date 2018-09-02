@@ -1,12 +1,12 @@
 # dotfiles
 
 ```bash
-mkdir .config
+mkdir -p .config
 mkdir -p .vim/syntax
 
 cd ~
 ln -s ~/dotfiles/vimrc .vimrc
-ln -s ~/dotfiles/gitignore .gitignore
+ln -s ~/dotfiles/gitconfig .gitconfig
 
 cd ~/.config
 ln -s ~/dotfiles/flake8
