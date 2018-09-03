@@ -13,6 +13,7 @@ cd ~/.vim/syntax
 ln -s ~/dotfiles/htmljinja.vim
 ln -s ~/dotfiles/jinja.vim
 
+# pip3 install --user flake8
 mkdir -p ~/.config
 cd ~/.config
 ln -s ~/dotfiles/flake8
