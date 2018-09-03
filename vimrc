@@ -114,10 +114,6 @@ NeoBundle 'posva/vim-vue'
 " NERDTree
 NeoBundle 'scrooloose/nerdtree'
 
-" Indent
-" NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-
 
 call neobundle#end()
 
@@ -130,7 +126,10 @@ NeoBundleCheck
 
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup = 0
+" let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven guibg=green ctermbg=4
 
 " for Python
 autocmd FileType python setl autoindent
@@ -180,12 +179,6 @@ autocmd FileType vue syntax sync fromstart
 
 " NERDTree shortcut
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven guibg=green ctermbg=4
 
 
 filetype on
