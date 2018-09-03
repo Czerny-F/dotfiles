@@ -1,10 +1,19 @@
 # dotfiles
 
-```bash
-$ cd ~
-$ ln -s /path/to/repo/.vimrc
-$ ln -s /path/to/repo/.bashrc
-$ ln -s /path/to/repo/.gitignore
-$ cd .config
-$ ln -s /path/to/repo/flake8
+## Vim
+
+```sh
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+sh ./install.sh
+
+ln -s ~/dotfiles/vimrc .vimrc
+
+mkdir -p ~/.vim/syntax
+cd ~/.vim/syntax
+ln -s ~/dotfiles/htmljinja.vim
+ln -s ~/dotfiles/jinja.vim
+
+mkdir -p ~/.config
+cd ~/.config
+ln -s ~/dotfiles/flake8
 ```
