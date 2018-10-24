@@ -29,6 +29,7 @@ set shiftwidth=2
 set autoindent
 set smartindent
 set smarttab
+set backspace=indent,eol,start
 
 syntax on
 
