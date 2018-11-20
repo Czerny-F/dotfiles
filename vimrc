@@ -75,6 +75,7 @@ if dein#load_state('/Users/lee/.cache/dein')
   call dein#add('bronson/vim-trailing-whitespace')
 
   call dein#add('w0rp/ale')
+  call dein#add('Shougo/neocomplete.vim')
   call dein#add('mattn/emmet-vim')
 
   call dein#end()
@@ -92,3 +93,6 @@ endif
 
 " NERDTree shortcut
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
