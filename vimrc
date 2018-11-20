@@ -77,6 +77,7 @@ if dein#load_state('/Users/lee/.cache/dein')
   call dein#add('w0rp/ale')
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('mattn/emmet-vim')
+  call dein#add('artur-shaik/vim-javacomplete2')
 
   call dein#end()
   call dein#save_state()
@@ -96,3 +97,13 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
+
+" Enable omni completion.
+" vim-javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+let g:neocomplete#sources#omni#input_patterns.java = '\h\w*\.\w*'
