@@ -82,6 +82,8 @@ if dein#load_state('/Users/lee/.cache/dein')
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Quramy/tsuquyomi')
 
+  call dein#add('pangloss/vim-javascript')
+
   call dein#end()
   call dein#save_state()
 endif
@@ -102,6 +104,7 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let g:neocomplete#enable_at_startup = 1
 
 " Enable omni completion.
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
