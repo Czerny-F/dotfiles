@@ -87,6 +87,7 @@ if dein#load_state('/Users/lee/.cache/dein')
 
   call dein#add('hynek/vim-python-pep8-indent')
   call dein#add('davidhalter/jedi-vim')
+  call dein#add('plytophogy/vim-virtualenv')
 
   call dein#end()
   call dein#save_state()
@@ -118,4 +119,7 @@ endif
 " jedi-vim + neocomplete
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
 let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
