@@ -76,7 +76,11 @@ if dein#load_state('/Users/lee/.cache/dein')
 
   call dein#add('w0rp/ale')
   call dein#add('Shougo/neocomplete.vim')
+
   call dein#add('mattn/emmet-vim')
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('Quramy/tsuquyomi')
 
   call dein#end()
   call dein#save_state()
