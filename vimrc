@@ -78,11 +78,15 @@ if dein#load_state('/Users/lee/.cache/dein')
   call dein#add('Shougo/neocomplete.vim')
 
   call dein#add('mattn/emmet-vim')
+
   call dein#add('leafgarland/typescript-vim')
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Quramy/tsuquyomi')
 
   call dein#add('pangloss/vim-javascript')
+
+  call dein#add('hynek/vim-python-pep8-indent')
+  call dein#add('davidhalter/jedi-vim')
 
   call dein#end()
   call dein#save_state()
@@ -105,8 +109,13 @@ let g:neocomplete#enable_at_startup = 1
 
 " Enable omni completion.
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=jedi#completions
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
+" jedi-vim + neocomplete
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
